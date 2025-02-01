@@ -40,7 +40,7 @@ interface BoardStore extends BoardState {
 
 export const useBoardStore = create<BoardStore>()(
   persist(
-    (set, get) => ({
+    (set) => ({
       lists: INITIAL_LISTS,
       addList: (title) =>
         set((state) => ({
